@@ -27,7 +27,7 @@ public class Lab17 {
 		try (Connection conn = DriverManager.getConnection( // create a connection to the course database
 				DBURL,
 				DBUSERID,
-				DBPASSWORD);
+				DBPASSWORD)
 		) {
 			conn.setAutoCommit(false); // turn off auto commit
 
@@ -67,7 +67,7 @@ public class Lab17 {
 			try (Connection conn = DriverManager.getConnection(
 					DBURL,
 					DBUSERID,
-					DBPASSWORD);) {
+					DBPASSWORD)) {
 				conn.rollback(); // commit or rollback the transaction
 			} catch (SQLException ex) {
 				System.out.println("Rollback Exception: " + ex);
